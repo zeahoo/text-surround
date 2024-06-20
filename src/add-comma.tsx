@@ -1,4 +1,4 @@
-import { Clipboard, showToast, Toast, closeMainWindow } from "@raycast/api";
+import { Clipboard, showToast, Toast, showHUD, closeMainWindow } from "@raycast/api";
 import convert from "./util/core";
 export default async function Command() {
   try {
@@ -8,6 +8,7 @@ export default async function Command() {
     console.log(result);
     await Clipboard.copy(result);
     await closeMainWindow();
+    showHUD("Copied to clipboard");
   } catch (error) {
     showToast({
       style: Toast.Style.Failure,
