@@ -11,22 +11,33 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Surround quote",
-      "description": "",
-      "mode": "view"
-    },
-    {
       "name": "add-quote",
       "title": "Add quote",
       "description": "add single quote line by line from your clipboard",
       "mode": "no-view"
-    },
+    }
+  ],
+  "preferences": [
     {
-      "name": "add-comma",
-      "title": "Add comma",
-      "description": "add comma line by line from your clipboard",
-      "mode": "no-view"
+      "required": true,
+      "title": "quote",
+      "name": "quote",
+      "description": "quote or single-quote surrounded to your lines",
+      "type": "dropdown",
+      "data": [
+        {
+          "value": "'",
+          "title": "Single quote"
+        },
+        {
+          "value": "\"",
+          "title": "Double quote"
+        },
+        {
+          "value": "",
+          "title": "<blank>"
+        }
+      ]
     }
   ],
   "dependencies": {

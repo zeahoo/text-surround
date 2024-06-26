@@ -1,9 +1,11 @@
-import { Clipboard, showToast, Toast, showHUD, closeMainWindow } from "@raycast/api";
+import { Clipboard, showToast, Toast, showHUD, closeMainWindow, getPreferenceValues } from "@raycast/api";
+import { QuoteConfig } from "./config/quote";
 import convert from "./util/core";
 export default async function Command() {
   try {
+    const config = getPreferenceValues<QuoteConfig>();
     const input = (await Clipboard.readText()) || "";
-    const surround_mark = "'";
+    const surround_mark = config.quote;
     const result = convert(input, surround_mark);
     console.log(input);
     console.log(result);
