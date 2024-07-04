@@ -15,6 +15,12 @@
       "title": "Add quote",
       "description": "add single quote line by line from your clipboard",
       "mode": "no-view"
+    },
+    {
+      "name": "add-comma",
+      "title": "Add comma",
+      "description": "add comma in the end of line, line by line from your clipboard",
+      "mode": "no-view"
     }
   ],
   "preferences": [
